@@ -19,7 +19,7 @@ html{
 }
 body{
     font-size: 16px;
-    background: url(../images/back.jpg);
+    background: url(../images/1.jpg);
     
     background-size: inherit;
 }
@@ -61,12 +61,14 @@ body{
     position: relative;
     border-bottom: 1px solid #999;
     .set{
+        
         width: 1.1rem;
         height: 0.6rem;
         border-radius: 2px;
         border: 2px solid #6b5b4e;
         @include top-bottom;
         left: 0.1rem;
+        z-index: 20;
         a{
             display: block;
             width: 100%;
@@ -75,6 +77,7 @@ body{
             text-align: center;
             color: #fff;
             font-size: 0.4rem;
+            font-weight: bold;
         }
        
     }
@@ -85,6 +88,7 @@ body{
         border: 2px solid #6b5b4e;
         @include top-bottom;
         right: 0.1rem;
+        z-index: 20;
         a{
             display: block;
             width: 100%;
@@ -201,6 +205,25 @@ body{
             img{
                 display: block;
                 height: 100%;
+                box-shadow: 0px 0px 2px #6b5b4e;
+            }
+        }
+        .state{
+            @include top-bottom;
+            right: 0.5rem;
+            height: auto;
+            width: auto;
+            display: block;
+            overflow: hidden;
+            z-index: 20;
+            line-height: 1.3rem;
+            text-align: center;
+            a{
+                display: block;
+                font-size: 0.6rem;
+                width: 0.6rem;
+                height: 0.6rem;
+                color: #9d7a5e;
             }
         }
     }
@@ -211,6 +234,12 @@ body{
         }
         .ding{
             left: -5%;
+        }
+        .state{
+            a{
+                 color: red;
+            }
+           
         }
     }
     li.delete-d{
@@ -235,7 +264,7 @@ body{
     left: 0;
     border-radius: 5px;
     overflow: hidden;
-    animation: height 1.5s linear both;
+   
     
     div{
         float: left;
@@ -255,6 +284,9 @@ body{
         color: red;
     }
     
+}
+#floor.floor{
+     animation: height 1s linear both;
 }
 
 
