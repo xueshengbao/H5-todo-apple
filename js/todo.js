@@ -41,7 +41,7 @@ $(function(){
 		todos=JSON.parse(localStorage.todos);
 		for(var i=0;i<todos.length;i++){
 			var c=(todos[i].state)?'done':'';
-			$('<li class="'+c+'"><div class="content">'+todos[i].name+'</div><div class="delete">×</div></li>').appendTo(ul);
+			$('<li class="'+c+'"><div class="ding"><img src="images/dd.png" alt="" /></div><div class="content"><div class="text">'+todos[i].name+'</div></div><div class="delete"><img src="images/del.png" alt="" /></div></li>').appendTo(ul);
 		}
 		
 	}
@@ -59,7 +59,7 @@ $(function(){
 		}
 		todos.push(todo);
 		localStorage.todos=JSON.stringify(todos)
-		$('<li><div class="content">'+v+'</div><div class="delete">×</div></li>').appendTo(ul);
+		$('<li><div class="ding"><img src="images/dd.png" alt="" /></div><div class="content"><div class="text">'+v+'</div></div><div class="delete"><img src="images/del.png" alt="" /></div></li>').appendTo(ul);
 		input.val('').focus();		
 	})
 	
@@ -100,7 +100,7 @@ $(function(){
 		var index=$(this).closest("li").index();
 		todos.splice(index,1);
 		localStorage.todos=JSON.stringify(todos);
-		$(this).closest("li").addClass("delete-d")
+		$(this).closest("li").css("display","none")
 		$(this).closest("li").delay(600).queue(function(){
 			$(this).remove().dequeue();
 		})
@@ -121,7 +121,7 @@ $(function(){
 		var lis=ul.find("li.done")
 		
 		lis.delay(600).queue(function(){
-			$(this).addClass("delete-d").dequeue().delay(600).addClass("delete-d").queue(function(){
+			$(this).css("display","none").dequeue().delay(600).addClass("delete-d").queue(function(){
 				$(this).remove().dequeue();
 			});
 		})
@@ -130,7 +130,12 @@ $(function(){
 	
 	
 	
-	
+	var set=$("#header .set");
+	set.click(function(){
+		$("#floor").addClass("floor");
+		
+		
+	})
 	
 	
 	
