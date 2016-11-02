@@ -2,7 +2,7 @@ $(function(){
 	//添加按钮
 	var add=$("#header .add");
 	//输入框
-	var input=$("#header input");
+	var input=$("#input input");
 	//生成内容部分
 	var ul=$("#uls");
 	//创建数组
