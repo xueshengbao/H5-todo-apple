@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"/>
+		<title>ToDo</title>
+		<link rel="stylesheet" href="css/todo.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/todo.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="header">
+			<!--输入框-->
+			<input type="text" />
+			<!--添加按钮-->
+			<div class="add"></div>
+		</div>
+		<!--文本部分-->
+		<ul id="uls">
+			<!--完成状态-->
+			
+			<!--<li class="done">
+				<div class="content">买房</div>
+				<div class="delete">×</div>
+			</li>-->
+			
+			<!--未完成状态-->
+			
+			<!--<li>
+				<div class="content">买房</div>
+				<div class="delete">×</div>
+			</li>-->
+		</ul>
+		<!--消除全部-->
+		<div class="all-clear">
+			<a href="javascript:;">清除所有内容</a>
+		</div>
+		<!--尾部-->
+		<div id="floor">
+			<!--所有-->
+			<div data-role="al" class="all index">所有</div>
+			<!--已完成-->
+			<div data-role="ac" class="active">已完成</div>
+			<!--未完成-->
+			<div data-role="co" class="completed">未完成</div>
+		</div>
+	</body>
+</html>
