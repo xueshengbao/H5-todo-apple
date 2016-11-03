@@ -41,7 +41,7 @@ $(function(){
 		todos=JSON.parse(localStorage.todos);
 		for(var i=0;i<todos.length;i++){
 			var c=(todos[i].state)?'done':'';
-			$('<li class=""+c+""><div class="ding"><img src="images/dd.png" alt="" /></div><div class="content"><div class="text">'+todos[i].name+'</div></div><div class="delete"><img src="images/del.png" alt="" /></div><div class="state"><a href="javascript:;">&#xe6d7;</a></div></li>').appendTo(ul);
+			$('<li class=""+c+""><div class="ding"><img src="images/dd.png" alt="" /></div><div class="content"><div class="text"><span>'+todos[i].name+'</span></div></div><div class="delete"><img src="images/del.png" alt="" /></div><div class="state"><a href="javascript:;">&#xe6d7;</a></div></li>').appendTo(ul);
 		}
 		
 	}
@@ -59,7 +59,7 @@ $(function(){
 		}
 		todos.push(todo);
 		localStorage.todos=JSON.stringify(todos)
-		$('<li><div class="ding"><img src="images/dd.png" alt="" /></div><div class="content"><div class="text">'+v+'</div></div><div class="delete"><img src="images/del.png" alt="" /></div><div class="state"><a href="javascript:;">&#xe6d7;</a></div></li>').appendTo(ul);
+		$('<li><div class="ding"><img src="images/dd.png" alt="" /></div><div class="content"><div class="text"><span>'+v+'</span></div></div><div class="delete"><img src="images/del.png" alt="" /></div><div class="state"><a href="javascript:;">&#xe6d7;</a></div></li>').appendTo(ul);
 		input.val('').focus();		
 	})
 	

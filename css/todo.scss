@@ -1,4 +1,4 @@
-$device-width:320px,360px,375px,412px,414px;
+$device-width:320px,360px,375px,412px,414px,768px,800px;
 $width:750px;
 *{
     padding: 0;
@@ -24,6 +24,7 @@ body{
     background-size: cover;
     
 }
+
 @each $w in $device-width{
     @media screen and (min-width:#{$w}){
         html{
@@ -193,6 +194,15 @@ body{
                  line-height: 1.3rem;
                  color: #6d432b;
                  font-weight: bold;
+                 display: block;
+                 span{
+                     width: 80%;
+                     height: auto;
+                     font-size: 0.6rem;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                     display: block;
+                 }
              }
         }
         .delete{
@@ -232,6 +242,11 @@ body{
     li.done{
         .content{
             left: 25%;
+            .text{
+                span{
+                    width: 56%;
+                }
+            }
         }
         .ding{
             left: -5%;

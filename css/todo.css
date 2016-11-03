@@ -56,6 +56,18 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 102.4px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 106.66667px;
+  }
+}
+
 @keyframes delete {
   from {
     transform: translateX(0%);
@@ -229,6 +241,16 @@ body {
   line-height: 1.3rem;
   color: #6d432b;
   font-weight: bold;
+  display: block;
+}
+
+#uls li .content .text span {
+  width: 80%;
+  height: auto;
+  font-size: 0.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 #uls li .delete {
@@ -275,6 +297,10 @@ body {
 
 #uls li.done .content {
   left: 25%;
+}
+
+#uls li.done .content .text span {
+  width: 56%;
 }
 
 #uls li.done .ding {
